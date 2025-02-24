@@ -1,17 +1,12 @@
 import React from "react";
 import { FaWrench } from "react-icons/fa";
-import heroimg from '../assets/images/about.png'
-
+import heroimg from "@/assets/images/about.png";
 
 const Hero = () => {
   return (
     <div className="w-full h-screen relative">
       <div className="absolute inset-0">
-        <img 
-          src={heroimg}
-          alt="Hero" 
-          className="w-full h-full object-fit"
-        />
+        <img src={heroimg} alt="Hero" className="w-full h-full object-fit" />
         {/* Optional overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50" />
       </div>
