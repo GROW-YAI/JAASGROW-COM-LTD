@@ -2,6 +2,7 @@ import React from "react";
 import { FaWrench } from "react-icons/fa";
 import heroimg from '../assets/images/about.png'
 
+
 const Hero = () => {
   return (
     <div className="w-full h-screen relative">

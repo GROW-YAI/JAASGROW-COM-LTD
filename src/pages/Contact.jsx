@@ -31,8 +31,8 @@ const Contact = () => {
           to="https://www.google.com/maps/search/?api=1&query=DIGITALADDRESS+GE-184-5279,+Accra,+Ghana"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 underline hover:text-blue-800 transition duration-200 flex gap-2 items-center"
-        ><FaLocationPin className='text-red-600 text-lg'/>
+          className="text-gray-600 underline hover:text-green-800 transition duration-200 flex gap-2 items-center"
+        ><FaLocationPin className='text-green-600 text-lg'/>
           DIGITALADDRESS CP-184-5279, Cape Coast, Ghana
         </Link>
       </div>
