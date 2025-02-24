@@ -1,120 +1,181 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
-import logo from "../assets/images/logo.png";
-import { FaBars, FaTimes } from 'react-icons/fa';
-
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import logo from "@/assets/images/logo.png";
+import { FaBars, FaTimes, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
-     const toggleMenu = () => {
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Active link style
+  const getLinkClass = (path) => {
+    const baseClass =
+      "py-2 px-4 font-medium text-sm transition-all duration-300 relative";
+    const isActive = location.pathname === path;
+
+    return `${baseClass} ${
+      isActive
+        ? "text-green-400 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-green-400"
+        : "text-[#fbf4d8] hover:text-green-400"
+    }`;
+  };
+
   return (
-    <nav className="bg-[rgba(24,99,6,1)] fixed w-full shadow-lg flex justify-between  z-10  md:px-10 rounded-md ">
-      <div className="flex -center items-center h-16">
-        <img
-          src={logo}
-          alt="logo"
-          className="h-12 w-12 md:h-16 md:w-32 object-contain"
-        />
-        <div className="ml-3">
-          <span className="font-bold font-mono text-[#fbf4d8] text-lg md:text-2xl">
-            Jaas<span className="text-[#bef79d]">GROW</span>
-          </span>{" "}
-          <span className="font-bold font-mono text-lg md:text-2xl text-[#fbf4d8] pl-3">
-            LIMITED
-          </span>
+    <>
+      {/* Top Info Bar */}
+      <div className="hidden  md:block bg-green-900 text-white py-1">
+        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
+          <div className="flex items-center space-x-4">
+            <a
+              href="tel:+233249567921"
+              className="flex items-center space-x-2 hover:text-green-300"
+            >
+              <FaPhone className="text-xs" />
+              <span>+233 24 956 7921</span>
+            </a>
+            <a
+              href="mailto:jaagrow@yahoo.com"
+              className="flex items-center space-x-2 hover:text-green-300"
+            >
+              <FaEnvelope className="text-xs" />
+              <span>jaagrow@yahoo.com</span>
+            </a>
+          </div>
+          <div className="text-green-200">
+            Transforming Agriculture Through Innovation
+          </div>
         </div>
       </div>
 
-       {/* Desktop Navigation */}
-       <div className="hidden md:flex items-center space-x-6 pl-36">
-        <ul className="flex space-x-2">
-          <NavLink
-            to="/"
-            className="py-4 px-2 text-[#fbf4d8] font-medium text-sm hover:text-[#97d495] transition duration-300"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/About"
-            className="py-4 px-2 text-[#fbf4d8] font-medium text-sm hover:text-[#97d495] transition duration-300"
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to="/Services"
-            className="py-4 px-2 text-[#fbf4d8] font-medium text-sm hover:text-[#97d495] transition duration-300"
-          >
-            Product
-          </NavLink>
-          <NavLink
-            to="/Cars"
-            className="py-4 px-2 text-[#fbf4d8] font-medium text-sm hover:text-[#97d495] transition duration-300"
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to="/Contact"
-            className="py-4 px-2 text-[#fbf4d8] font-medium text-sm hover:text-[#97d495] transition duration-300"
-          >
-            Contact
-          </NavLink>
-        </ul>
-      </div>
+      {/* Main Navbar */}
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-green-900/95 backdrop-blur-sm shadow-lg py-2"
+            : "bg-green-900 py-4"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            {/* Logo Section */}
+            <div className="flex items-center space-x-2">
+              <img
+                src={logo}
+                alt="JAASGROW"
+                className="h-12 w-12 object-contain"
+              />
+              <div>
+                <span className="font-bold text-[#fbf4d8] text-xl">
+                  Jaas<span className="text-[#bef79d]">GROW</span>
+                </span>
+                <span className="hidden md:inline-block font-bold text-[#fbf4d8] text-xl ml-2">
+                  LIMITED
+                </span>
+              </div>
+            </div>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-white focus:outline-none">
-          {isOpen ? (
-            <FaTimes className="h-8 w-8" />
-          ) : (
-            <FaBars className="h-8 w-8" />
-          )}
-        </button>
-      </div> 
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-1">
+              <NavLink to="/" className={getLinkClass("/")}>
+                Home
+              </NavLink>
+              <NavLink to="/about" className={getLinkClass("/about")}>
+                About Us
+              </NavLink>
+              <NavLink to="/products" className={getLinkClass("/products")}>
+                Products
+              </NavLink>
+              <NavLink to="/products" className={getLinkClass("/products")}>
+                Services
+              </NavLink>
+              <NavLink to="/contact" className={getLinkClass("/contact")}>
+                Contact
+              </NavLink>
+              <button className="ml-4 bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors duration-300 shadow-md">
+                Get Started
+              </button>
+            </div>
 
-       {/* Mobile Navigation */}
-       {isOpen && (
-        <div className="absolute top-16 left-0 right-0 bg-[rgb(23,79,133)] p-4 md:hidden">
-          <ul className="flex flex-col space-y-4">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className="md:hidden text-white focus:outline-none"
+            >
+              {isOpen ? (
+                <FaTimes className="h-6 w-6" />
+              ) : (
+                <FaBars className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden transition-all duration-300 ${
+            isOpen
+              ? "opacity-100 visible max-h-96"
+              : "opacity-0 invisible max-h-0"
+          }`}
+        >
+          <div className="bg-green-800 px-4 py-2 space-y-1">
             <NavLink
               to="/"
-              className="text-gray-300 font-medium text-sm hover:text-[#97d495] transition duration-300"
+              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
             >
               Home
             </NavLink>
             <NavLink
               to="/About"
-              className="text-gray-300 font-medium text-sm hover:text-[#97d495] transition duration-300"
+              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
             >
               About Us
             </NavLink>
             <NavLink
               to="/Services"
-              className="text-gray-300 font-medium text-sm hover:text-[#97d495] transition duration-300"
+              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
             >
               Products
             </NavLink>
             <NavLink
               to="/Cars"
-              className="text-gray-300 font-medium text-sm hover:text-[#97d495] transition duration-300"
+              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
             >
               Services
             </NavLink>
             <NavLink
               to="/Contact"
-              className="text-gray-300 font-medium text-sm hover:text-[#97d495] transition duration-300"
+              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </NavLink>
-          </ul>
+            <button className="w-full mt-2 bg-green-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors duration-300">
+              Get Started
+            </button>
+          </div>
         </div>
-      )}
-    </nav>
-  )
-}
+      </nav>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
