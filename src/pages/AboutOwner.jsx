@@ -137,7 +137,7 @@ const AboutOwner = () => {
           {/* Bio Container with Quote */}
           <div className="md:w-2/3">
             <div className="relative">
-              <FaQuoteLeft className="text-green-100 text-6xl absolute -top-8 -left-4" />
+              
               <h2 className="text-3xl font-bold text-green-800 mb-6">
                 Justice Kwadwo Turzin
               </h2>

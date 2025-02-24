@@ -13,40 +13,25 @@ const Hero = () => {
           className="w-full h-full object-cover transform scale-105 motion-safe:animate-subtle-zoom"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/30 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-700/20 to-black/60" />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
         <div className="max-w-3xl text-white">
-          <div className="mb-6 inline-block">
-            <span className="bg-green-500/20 text-green-100 px-4 py-1 rounded-full text-sm font-semibold border border-green-500/30">
-              Revolutionizing Agriculture
-            </span>
-          </div>
+       
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Welcome to{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-100">
               JAASGROW
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 text-white max-w-2xl leading-relaxed">
             Enhancing crop yields by up to 50% with our innovative organic
             solutions. Experience the future of sustainable farming today.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg">
-              Discover Our Products
-              <FaArrowRight className="text-sm" />
-            </button>
-            <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full transition-all duration-300 border border-white/30 flex items-center gap-2">
-              <FaLeaf className="text-green-400" />
-              Learn More
-            </button>
-          </div>
-
+         
           {/* Key Features */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -68,7 +53,7 @@ const Hero = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/20"
               >
                 <div className="text-2xl mb-2">{feature.icon}</div>
                 <h3 className="font-semibold text-lg">{feature.title}</h3>
@@ -104,11 +89,11 @@ const Hero = () => {
       </div>
 
       {/* Animated Scroll Indicator */}
-      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-10">
+      {/* <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-10">
         <div className="animate-bounce bg-white/30 p-2 rounded-full backdrop-blur-sm">
           <FaArrowRight className="text-white transform rotate-90" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
