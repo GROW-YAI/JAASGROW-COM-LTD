@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "@/assets/images/logo.png";
 import { FaBars, FaTimes, FaPhone, FaEnvelope } from "react-icons/fa";
 
@@ -38,22 +38,22 @@ const Navbar = () => {
     <>
       {/* Top Info Bar */}
       <div className="hidden  md:block bg-green-900 text-white py-1">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
+        <div className="container mx-auto px-4 flex justify-between items-center text-sm"> 
           <div className="flex items-center space-x-4">
-            <a
-              href="tel:+233249567921"
+            <Link
+              to="tel:+233249567921"
               className="flex items-center space-x-2 hover:text-green-300"
             >
               <FaPhone className="text-xs" />
               <span>+233 24 956 7921</span>
-            </a>
-            <a
-              href="mailto:jaagrow@yahoo.com"
+            </Link>
+            <Link
+              to="mailto:jaasgrowcompanyltd@gmail.com"
               className="flex items-center space-x-2 hover:text-green-300"
             >
               <FaEnvelope className="text-xs" />
-              <span>jaagrow@yahoo.com</span>
-            </a>
+              <span>jaasgrowcompanyltd@gmail.com</span>
+            </Link>
           </div>
           <div className="text-green-200">
             Transforming Agriculture Through Innovation
@@ -78,13 +78,11 @@ const Navbar = () => {
                 alt="JAASGROW"
                 className="h-12 w-12 object-contain"
               />
-              <div>
+              <div >
                 <span className="font-bold text-[#fbf4d8] text-xl">
-                  Jaas<span className="text-[#bef79d]">GROW</span>
+                  Jaas<span className="text-[rgb(120,221,61)] italic ">GROW</span>
                 </span>
-                <span className="hidden md:inline-block font-bold text-[#fbf4d8] text-xl ml-2">
-                  LIMITED
-                </span>
+                
               </div>
             </div>
 
@@ -105,9 +103,9 @@ const Navbar = () => {
               <NavLink to="/contact" className={getLinkClass("/contact")}>
                 Contact
               </NavLink>
-              <button className="ml-4 bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors duration-300 shadow-md">
+              {/* <button className="ml-4 bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors duration-300 shadow-md">
                 Get Started
-              </button>
+              </button> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -141,37 +139,40 @@ const Navbar = () => {
               Home
             </NavLink>
             <NavLink
-              to="/About"
+              to="/about"
               className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               About Us
             </NavLink>
             <NavLink
-              to="/Services"
+              to="/products"
               className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               Products
             </NavLink>
             <NavLink
-              to="/Cars"
+              to="/products"
               className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               Services
             </NavLink>
             <NavLink
-              to="/Contact"
+              to="/contact"
               className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </NavLink>
-            <button className="w-full mt-2 bg-green-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors duration-300">
+            {/* <button className="w-full mt-2 bg-green-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors duration-300">
               Get Started
-            </button>
+            </button> */}
           </div>
+          </div>
+          
+          
         </div>
       </nav>
     </>

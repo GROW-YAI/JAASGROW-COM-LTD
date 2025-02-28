@@ -13,16 +13,16 @@ const Hero = () => {
           className="w-full h-full object-cover transform scale-105 motion-safe:animate-subtle-zoom"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-green-700/20 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-green-600/20" />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
         <div className="max-w-3xl text-white">
        
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
             Welcome to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-100">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-200">
               JAASGROW
             </span>
           </h1>
