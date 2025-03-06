@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaSeedling,
   FaLeaf,
   FaHandHoldingWater,
   FaRecycle,
 } from "react-icons/fa";
-import fert from "@/assets/images/image4.png";
-import fert2 from "@/assets/images/image3.png";
+import fert from "@/assets/images/prdt2.jpg";
+import fert2 from "@/assets/images/prdt1.jpg";
+import fert3 from "@/assets/images/image3.png";
+import { FaSpaghettiMonsterFlying } from "react-icons/fa6";
 
 const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState(0);
+
   const services = [
     {
       icon: <FaSeedling className="text-4xl text-green-600" />,
@@ -17,7 +21,7 @@ const Products = () => {
         "Our flagship 3-in-1 organic fertilizer enhances soil health and boosts crop yields naturally.",
     },
     {
-      icon: <FaLeaf className="text-4xl text-green-600" />,
+      icon: <FaSpaghettiMonsterFlying className="text-4xl text-green-600" />,
       title: "Natural Pesticide",
       description:
         "Eco-friendly pest control solution integrated into our organic fertilizer for comprehensive crop protection.",
@@ -47,6 +51,18 @@ const Products = () => {
         "100% organic",
         "Cost-effective",
       ],
+      details: {
+        composition: "100% Organic Materials",
+        application: "Easy to apply - mix with soil or use as top dressing",
+        benefits: [
+          "Enhanced soil fertility",
+          "Natural pest control",
+          "Improved water retention",
+          "Increased crop yield",
+          "Better produce quality",
+        ],
+        recommended_for: "All types of crops and farming practices",
+      },
     },
     {
       image: fert,
@@ -58,106 +74,211 @@ const Products = () => {
         "Improved crop quality",
         "Extended shelf life",
       ],
+      details: {
+        composition: "Natural Growth Enhancers",
+        application: "Foliar spray or soil application",
+        benefits: [
+          "Faster growth rate",
+          "Stronger root development",
+          "Enhanced nutrient uptake",
+          "Better fruit formation",
+        ],
+        recommended_for: "Vegetables and fruit crops",
+      },
     },
-    {
-      image: fert2,
-      title: "Soil Revitalizer",
-      description:
-        "Advanced soil conditioning solution for optimal growing conditions.",
-      features: [
-        "Better water retention",
-        "Enhanced soil structure",
-        "Increased fertility",
-      ],
-    },
+    // {
+    //   image: fert3,
+    //   title: "Soil Revitalizer",
+    //   description:
+    //     "Advanced soil conditioning solution for optimal growing conditions.",
+    //   features: [
+    //     "Better water retention",
+    //     "Enhanced soil structure",
+    //     "Increased fertility",
+    //   ],
+    //   details: {
+    //     composition: "Organic Soil Amendments",
+    //     application: "Mix with soil before planting",
+    //     benefits: [
+    //       "Improved soil structure",
+    //       "Better drainage",
+    //       "Enhanced microbial activity",
+    //       "Long-lasting fertility",
+    //     ],
+    //     recommended_for: "All soil types, especially depleted soils",
+    //   },
+    // },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="bg-gradient-to-b from-green-200 to-gray-10 py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
-            Innovative Agricultural Solutions
+            Our Product
           </h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+          <div className="w-40 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover JAASGROW's revolutionary organic farming solutions,
-            designed to enhance crop yields while promoting sustainable
-            agriculture practices.
+            Discover JAASGROW's revolutionary organic farming solutions
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4 bg-green-50 p-4 rounded-full">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-green-800 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600">{service.description}</p>
+        {/* Products and Description Layout */}
+        <div className=" ">
+        <div className="flex flex-col md:flex-col ">
+          {/* Products List - Left Side */}
+        
+            <div className=" grid grid-cols-2  justify-items-center  ">
+              <div className="w-64 h-64 md:w-[50%] md:h-[40vh] flex items-center  ">
+              <img
+                      src={fert2}
+                      alt={''}
+                   className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-full"
+                    />
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Featured Products Section */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center text-green-800 mb-12">
-            Featured Products
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.map((product, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
-              >
-                <div className="h-56 relative">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-green-900 opacity-10"></div>
+              <div className="w-64 h-64 md:w-[50%] md:h-[40vh]  ">
+              <img
+                      src={fert}
+                      alt={''}
+                      className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-full"
+                    />
+              </div>
+              {products.map((product, index) => (
+                <div
+                  key={index}
+                  className={`cursor-pointer transition-all duration-300 ${
+                    selectedProduct === index
+                      ? "ring-2 ring-green-500 shadow-lg"
+                      : "hover:shadow-md"
+                  } rounded-xl overflow-hidden bg-white`}
+                  onClick={() => setSelectedProduct(index)}
+                >
+                  {/* <div className="h-72 relative overflow-hidden">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-full object-contain transform transition-transform duration-500 hover:scale-110"
+                    />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent ${
+                        selectedProduct === index ? "opacity-80" : "opacity-60"
+                      }`}
+                    ></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <h3 className="text-xl font-semibold mb-2">
+                        {product.title}
+                      </h3>
+                      <p className="text-sm text-gray-200 line-clamp-2">
+                        {product.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {product.features.slice(0, 2).map((feature, i) => (
+                          <span
+                            key={i}
+                            className="text-xs bg-white/20 px-2 py-1 rounded-full"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div> */}
+                    {/* </div> */}
+                  {/* </div> */}
                 </div>
-                <div className="p-6">
-                  <h4 className="font-semibold text-xl text-green-800 mb-3">
-                    {product.title}
+              ))}
+           
+          </div>
+
+          {/* Product Details - Right Side */}
+          <div className="mt-2 mx-auto">
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-green-800 mb-4">
+                  {products[selectedProduct].title}
+                </h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  {products[selectedProduct].description}
+                </p>
+              </div>
+
+              <div className="space-y-8">
+                {/* Features Section */}
+                <div className="bg-green-50/50 p-6 rounded-xl border border-green-100">
+                  <h4 className="text-xl font-semibold text-green-800 mb-4">
+                    Key Features
                   </h4>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
-                  <div className="space-y-2">
-                    {product.features.map((feature, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center text-sm text-gray-600"
-                      >
-                        <FaLeaf className="text-green-500 mr-2" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {products[selectedProduct].features.map(
+                      (feature, index) => (
+                        <div
+                          key={index}
+                          className="bg-white p-4 rounded-lg shadow-sm"
+                        >
+                          <p className="text-gray-700">{feature}</p>
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
+
+                {/* Technical Details */}
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-xl font-semibold text-green-800 mb-3">
+                      Composition
+                    </h4>
+                    <p className="text-gray-700">
+                      {products[selectedProduct].details.composition}
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-green-800 mb-3">
+                      Application
+                    </h4>
+                    <p className="text-gray-700">
+                      {products[selectedProduct].details.application}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Benefits Section */}
+                <div>
+                  <h4 className="text-xl font-semibold text-green-800 mb-4">
+                    Key Benefits
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {products[selectedProduct].details.benefits.map(
+                      (benefit, index) => (
+                        <div key={index} className="bg-gray-50 p-3 rounded-lg">
+                          <p className="text-gray-700">{benefit}</p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+
+                {/* Recommendations */}
+                <div>
+                  <h4 className="text-xl font-semibold text-green-800 mb-3">
+                    Recommended For
+                  </h4>
+                  <p className="text-gray-700">
+                    {products[selectedProduct].details.recommended_for}
+                  </p>
+                </div>
+
+                {/* Call to Action */}
+                <div className="pt-6 border-t">
+                  <button className="w-full bg-green-600 text-white py-4 rounded-xl hover:bg-green-700 transition-colors duration-300 text-lg font-semibold">
+                    Request Product Information
+                  </button>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <button className="bg-green-600 text-white px-8 py-4 rounded-full hover:bg-green-700 transition-colors duration-300 shadow-md hover:shadow-lg">
-            Request Product Information
-          </button>
-          <p className="mt-4 text-gray-600">
-            Learn how our products can transform your farming practices
-          </p>
         </div>
+       
       </div>
     </section>
   );

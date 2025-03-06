@@ -6,24 +6,24 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaEnvelope,
-  FaLeaf,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "@/assets/images/logo.png";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const companyLinks = [
     { name: "About Us", path: "/about" },
-    { name: "Our Products", path: "/services" },
-    { name: "Services", path: "/cars" },
+    { name: "Our Products", path: "/products" },
+    { name: "Services", path: "/products" },
     { name: "Contact", path: "/contact" },
   ];
 
   const productLinks = [
-    { name: "Asaase Aduane", path: "/services" },
-    { name: "Organic Fertilizer", path: "/services" },
-    { name: "Soil Amendment", path: "/services" },
-    { name: "Natural Pesticide", path: "/services" },
+    { name: "Asaase Aduane", path: "/products" },
+    { name: "Organic Fertilizer", path: "/products" },
+    { name: "Soil Amendment", path: "/products" },
+    { name: "Natural Pesticide", path: "/products" },
   ];
 
   return (
@@ -37,32 +37,42 @@ const Footer = () => {
               <img src={logo} alt="JAASGROW" className="h-12 w-12" />
               <div>
                 <h3 className="text-xl font-bold">
-                  Jaas<span className="text-green-400">GROW</span>
+                  Jaas<span className="text-green-300">GROW</span> Limited
+                  Company
                 </h3>
-                <p className="text-sm text-green-200">
-                  Agricultural Innovation
-                </p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Revolutionizing agriculture through innovative organic solutions.
-              Enhancing crop yields by up to 50% while promoting sustainable
-              farming practices.
+            <p className="text-white text-sm leading-relaxed">
+              Nurture the Earth, Empower Farmers, Promote Environmentally
+              Sustainable Agriculture, and a Genuine and Safe Food System for
+              the Future.
             </p>
+
             <div className="flex space-x-4">
-              <SocialLink
-                href="https://www.facebook.com/profile.php?id=100063974685967"
-                icon={<FaFacebook />}
-              />
-              <SocialLink href="#" icon={<FaInstagram />} />
-              <SocialLink href="#" icon={<FaLinkedin />} />
+              <Link to="https://www.facebook.com/jaasgrowltd">
+                <FaFacebook className="text-green-200 text-xl" />
+              </Link>
+              <Link to="https://www.instagram.com/jaasgrowltd/">
+                <FaInstagram className="text-green-200 text-xl" />
+              </Link>
+              <Link
+                to="https://www.linkedin.com/company/jaasgrowltd/
+"
+              >
+                <FaLinkedin className="text-green-200 text-xl" />
+              </Link>
+              <Link
+                to="https://twitter.com/jaasgrowltd
+"
+              >
+                <FaXTwitter className="text-green-200 text-xl" />
+              </Link>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 flex items-center">
-              <FaLeaf className="mr-2 text-green-400" />
+            <h4 className="text-lg font-semibold mb-6 flex items-center text-green-200">
               Company
             </h4>
             <ul className="space-y-3">
@@ -70,7 +80,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm flex items-center"
+                    className="text-white hover:text-green-400 transition-colors duration-200 text-sm flex items-center"
                   >
                     <span className="mr-2">›</span>
                     {link.name}
@@ -82,8 +92,7 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 flex items-center">
-              <FaLeaf className="mr-2 text-green-400" />
+            <h4 className="text-lg font-semibold mb-6 flex items-center text-green-200">
               Products
             </h4>
             <ul className="space-y-3">
@@ -91,7 +100,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm flex items-center"
+                    className="text-white hover:text-green-400 transition-colors duration-200 text-sm flex items-center"
                   >
                     <span className="mr-2">›</span>
                     {link.name}
@@ -103,41 +112,42 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 flex items-center">
-              <FaLeaf className="mr-2 text-green-400" />
+            <h4 className="text-lg font-semibold mb-6 flex items-center text-green-200">
               Contact Us
             </h4>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="https://maps.google.com"
+                <Link
+                  to="https://www.google.com/maps/search/university+of+cape+coast+Akotokyer+00023/@5.1106051,-1.2902553,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDMwMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start space-x-3 text-gray-300 hover:text-green-400 transition-colors duration-200"
+                  className="flex items-start space-x-3 text-white hover:text-green-400 transition-colors duration-200"
                 >
                   <FaMapMarkerAlt className="mt-1" />
                   <span className="text-sm">
                     UCC, Cape Coast, Akotokyer 00023, GH
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="tel:+233249567921"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-green-400 transition-colors duration-200"
+                <Link
+                  href="tel:+233246887818"
+                  className="flex items-center space-x-3 text-white hover:text-green-400 transition-colors duration-200"
                 >
                   <FaPhone />
-                  <span className="text-sm">+233 24 956 7921</span>
-                </a>
+                  <span className="text-sm">
+                    +233 246 887 818, +233 553 115 662
+                  </span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="mailto:jaagrow@yahoo.com"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-green-400 transition-colors duration-200"
+                <Link
+                  to="mailto:jaasgrowcompanyltd@gmail.com"
+                  className="flex items-center space-x-3 text-white hover:text-green-400 transition-colors duration-200"
                 >
                   <FaEnvelope />
-                  <span className="text-sm">jaagrow@yahoo.com</span>
-                </a>
+                  <span className="text-sm">jaasgrowcompanyltd@gmail.com</span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -149,18 +159,18 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <p>
-              © {new Date().getFullYear()} JAASGROW Limited. All rights
+              © {new Date().getFullYear()} JAASGROW Limited Company. All rights
               reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
-                to="/privacy"
+                to="/#"
                 className="hover:text-green-400 transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
-                to="/terms"
+                to="/#"
                 className="hover:text-green-400 transition-colors duration-200"
               >
                 Terms of Service
@@ -172,16 +182,5 @@ const Footer = () => {
     </footer>
   );
 };
-
-const SocialLink = ({ href, icon }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-green-800 p-2 rounded-full hover:bg-green-700 transition-colors duration-200 text-green-200 hover:text-white"
-  >
-    {icon}
-  </a>
-);
 
 export default Footer;

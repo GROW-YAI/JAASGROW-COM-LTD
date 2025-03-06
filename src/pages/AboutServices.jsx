@@ -112,103 +112,109 @@
 // export default AboutServices
 
 import React from "react";
-import aboutImg from "@/assets/images/image6.png";
+import aboutImg from "@/assets/images/about1.jpg"; // Ensure this path is correct
 import { FaLeaf, FaLightbulb, FaCheck, FaSeedling } from "react-icons/fa";
 
 const AboutServices = () => {
   return (
-    <div className="bg-gray-50 py-16">
-      {/* Header Section */}
-      <div className="container mx-auto px-4 mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-green-800 mb-4">
-          About JAASGROW
-        </h1>
-        <div className="w-24 h-1 bg-green-600 mx-auto"></div>
-      </div>
-
-      {/* Overview Section */}
+    <div className="bg-gradient-to-b from-green-100 to-white py-20">
+      {/* About Section */}
       <div className="container mx-auto px-4 mb-20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          {/* Image Container */}
-          <div className="md:w-1/2">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={aboutImg}
-                alt="Jaasgrow Farming"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-green-900 opacity-10"></div>
-            </div>
-          </div>
+        <div className="text-center mb-16">
+          <h1 className="text-3xl md:text-4xl font-bold text-green-900 mb-6">
+            About JAASGROW
+          </h1>
+          <div className="w-52 h-1.5 bg-green-600 mx-auto rounded-full"></div>
+        </div>
 
+        {/* Overview Section */}
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Description Container */}
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold text-green-800 mb-6">
-              Transforming Agriculture
+            <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-8">
+            The Farmers’ Choice 
+
             </h2>
-            <div className="space-y-4 text-gray-700">
-              <p className="leading-relaxed">
+            <div className="space-y-6 text-gray-700">
+              <p className="text-lg leading-relaxed">
                 At{" "}
-                <span className="font-semibold text-green-700">JAASGROW</span>,
-                we revolutionize farming with solutions that enhance yields by
-                up to <span className="font-semibold text-green-700">50%</span>.
+                <span className="font-semibold text-green-700">JAASGROW</span>, we
+                revolutionize farming with solutions that enhance yields by up to{" "}
+                <span className="font-semibold text-green-700">50%</span>.
               </p>
-              <p className="leading-relaxed">
+              <p className="text-lg leading-relaxed">
                 Our innovative{" "}
-                <span className="font-semibold">organic fertilizer</span>{" "}
+                <span className="font-semibold text-green-700">organic fertilizer</span>{" "}
                 doubles as a natural pesticide, providing comprehensive crop
                 protection while maintaining ecological balance.
               </p>
+              <p className="text-lg leading-relaxed"> We Nurture the Earth, Empower Farmers, Promote Environmentally Sustainable Agriculture, and a Genuine and Safe Food System for the Future.</p>
             </div>
           </div>
+
+          {/* Image Container */}
+          <div className="md:w-1/2 relative">
+            <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <img
+                src={aboutImg} 
+                alt="Agriculture"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="pt-5 text-lg text-gray-800 font-bold">
+              <h1>so we say{" "}
+              <span className="font-semibold text-green-700">"DO NOT WASTE THE WASTE"</span></h1>
+            </div>
+            </div>
+
         </div>
       </div>
 
       {/* Services Grid Section */}
-      <div className="bg-white py-16">
+      <div className="py-20 bg-gradient-to-b from-green-50 to-green-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-green-800 mb-12">
+            <h2 className="text-4xl font-bold text-center text-green-900 mb-16">
               Our Approach
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Mission */}
-              <div className="bg-gray-50 rounded-xl p-8 shadow-md transform hover:scale-105 transition-transform duration-300">
-                <div className="text-green-600 text-3xl mb-4">
+              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div className="text-green-600 text-4xl mb-6">
                   <FaLeaf />
                 </div>
-                <h3 className="text-xl font-semibold text-green-800 mb-4">
+                <h3 className="text-2xl font-bold text-green-900 mb-4">
                   Our Mission
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 leading-relaxed">
                   Empowering farmers with sustainable solutions for improved
                   crop yields and ecological farming practices.
                 </p>
               </div>
 
               {/* Vision */}
-              <div className="bg-gray-50 rounded-xl p-8 shadow-md transform hover:scale-105 transition-transform duration-300">
-                <div className="text-green-600 text-3xl mb-4">
+              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div className="text-green-600 text-4xl mb-6">
                   <FaLightbulb />
                 </div>
-                <h3 className="text-xl font-semibold text-green-800 mb-4">
+                <h3 className="text-2xl font-bold text-green-900 mb-4">
                   Our Vision
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 leading-relaxed">
                   Leading Africa's agricultural transformation through
                   innovative, eco-friendly farming solutions.
                 </p>
               </div>
 
               {/* Values */}
-              <div className="bg-gray-50 rounded-xl p-8 shadow-md transform hover:scale-105 transition-transform duration-300">
-                <div className="text-green-600 text-3xl mb-4">
+              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div className="text-green-600 text-4xl mb-6">
                   <FaSeedling />
                 </div>
-                <h3 className="text-xl font-semibold text-green-800 mb-4">
+                <h3 className="text-2xl font-bold text-green-900 mb-4">
                   Our Values
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 leading-relaxed">
                   Commitment to sustainability, innovation, and farmer success
                   drives everything we do.
                 </p>
@@ -219,12 +225,13 @@ const AboutServices = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="bg-gradient-to-b from-green-50 to-green-100">
+      <div className="container mx-auto px-4 py-10  ">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">
+          <h2 className="text-4xl font-bold text-center text-green-900 mb-16">
             Why Choose JAASGROW?
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {[
               "Up to 50% yield increase",
               "Natural pest control",
@@ -235,14 +242,15 @@ const AboutServices = () => {
             ].map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg"
+                className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <FaCheck className="text-green-600 flex-shrink-0" />
-                <span className="text-gray-700">{benefit}</span>
+                <FaCheck className="text-green-600 w-6 h-6 flex-shrink-0" />
+                <span className="text-lg text-gray-800 font-medium">{benefit}</span>
               </div>
             ))}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

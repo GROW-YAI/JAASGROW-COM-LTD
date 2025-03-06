@@ -37,15 +37,15 @@ const Navbar = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="hidden  md:block bg-green-900 text-white py-1">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm"> 
+      <div className=" w-full z-30 top-0 left-0 fixed md:block bg-black/70 backdrop-blur-sm text-white animate-pulse  h-[8vh] pt-4 ">
+        <div className="container mx-auto px-2  flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
             <Link
-              to="tel:+233249567921"
+              to="tel:+233246887818"
               className="flex items-center space-x-2 hover:text-green-300"
             >
               <FaPhone className="text-xs" />
-              <span>+233 24 956 7921</span>
+              <span>+233 246 887 818, +233 553 115 662</span>
             </Link>
             <Link
               to="mailto:jaasgrowcompanyltd@gmail.com"
@@ -63,9 +63,9 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${
+        className={`fixed w-full mt-10 top-0 left-0 z-40  transition-all duration-300 ${
           isScrolled
-            ? "bg-green-900/95 backdrop-blur-sm shadow-lg py-2"
+            ? "bg-green-900/85 backdrop-blur-sm shadow-lg py-2"
             : "bg-green-900 py-4"
         }`}
       >
@@ -78,11 +78,11 @@ const Navbar = () => {
                 alt="JAASGROW"
                 className="h-12 w-12 object-contain"
               />
-              <div >
+              <div>
                 <span className="font-bold text-[#fbf4d8] text-xl">
-                  Jaas<span className="text-[rgb(120,221,61)] italic ">GROW</span>
+                  Jaas
+                  <span className="text-[rgb(120,221,61)] italic ">GROW</span>
                 </span>
-                
               </div>
             </div>
 
@@ -166,13 +166,8 @@ const Navbar = () => {
             >
               Contact
             </NavLink>
-            {/* <button className="w-full mt-2 bg-green-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors duration-300">
-              Get Started
-            </button> */}
+           
           </div>
-          </div>
-          
-          
         </div>
       </nav>
     </>
@@ -180,3 +175,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
