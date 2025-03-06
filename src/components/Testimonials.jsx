@@ -3,7 +3,7 @@ import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import farmer1 from "@/assets/images/image1.png";
 import farmer2 from "@/assets/images/image2.png";
 import farmer3 from "@/assets/images/image3.png";
-import farmer4 from "@/assets/images/image4.png";
+import farmer4 from "@/assets/images/about.png";
 import farmer5 from "@/assets/images/image5.png";
 import { Link } from "react-router-dom";
 
@@ -72,8 +72,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-green-100">
+      <div className="container mx-auto px-4  ">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
@@ -114,7 +114,7 @@ const Testimonials = () => {
               key={index}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row ">
                 {/* Image Section - Left Side */}
                 <div className="md:w-1/3 p-6 flex items-center justify-center">
                   <div className="w-full aspect-square max-w-sm rounded-xl overflow-hidden">
@@ -133,7 +133,9 @@ const Testimonials = () => {
                       <p className="font-semibold text-2xl text-gray-800 mb-1">
                         {testimonial.name}
                       </p>
-                      <p className="text-gray-500 text-lg">{testimonial.role}</p>
+                      <p className="text-gray-500 text-lg">
+                        {testimonial.role}
+                      </p>
                     </div>
                     <div className="flex text-yellow-400 ml-auto">
                       {[...Array(5)].map((_, i) => (
