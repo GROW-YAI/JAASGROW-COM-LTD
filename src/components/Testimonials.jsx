@@ -14,7 +14,7 @@ const Testimonials = () => {
       role: "3 acres farm",
       image: farmer1,
       quote:
-        "After using JAASGROW's Asaase Aduane, our yield increased from 13,000kg to 54,000kg. The results are incredible!",
+        "After using  Asaase Aduane, our yield increased from 13,000kg to 54,000kg. The results are incredible!",
       stats: {
         before: "13,000kg",
         after: "54,000kg",
@@ -114,16 +114,16 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-4">
+        <div className="max-w-6xl mx-auto space-y-4 grid grid-cols-2 gap-10">
   {testimonials.map((testimonial, index) => (
     <div
       key={index}
-      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 md:h-52 h-52 "
     >
       <div className="flex flex-col md:flex-row">
         {/* Image Section - Left Side */}
         <div className="md:w-1/4 p-3 flex items-center justify-center">
-          <div className="w-20 h-20 md:w-full md:h-52 rounded-lg overflow-hidden">
+          <div className="w-20 h-20 md:w-full md:h-48 rounded-lg overflow-hidden">
             <img
               src={testimonial.image}
               alt={testimonial.name}
@@ -172,7 +172,7 @@ const Testimonials = () => {
               </div>
               <div>
                 <p className="text-xs text-gray-900 mb-1">Increase</p>
-                <p className="font-bold text-md text-green-600">
+                <p className="font-bold text-md text-green-800">
                   +{testimonial.stats.increase}
                 </p>
               </div>
