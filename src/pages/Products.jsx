@@ -95,7 +95,7 @@ const Products = () => {
 
   return (
     <section className="bg-green-100 py-16">
-      <div className="max-w-7xl mx-auto px-4 mt-16">
+      <div className="max-w-6xl mx-auto px-4 mt-16">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
@@ -115,7 +115,7 @@ const Products = () => {
             <motion.div className="flex gap-10 justify-center  "
              initial={{ x: -100 }}
              animate={{ x: 0 }}
-             transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}>
+             transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}>
               <div className="w-64 h-64 md:w-80 md:h-80 flex items-center  ">
                 <img
                   src={fert2}
@@ -145,8 +145,10 @@ const Products = () => {
                 />
                </div>
                </motion.div>
+
+
             {/* Product Details - down */}
-            <div className="mt-2 mx-auto md:w-full">
+            <div className="mt-2 mx-auto ">
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="mb-8">
                   <h3 className="text-3xl font-bold text-green-800 mb-4">
