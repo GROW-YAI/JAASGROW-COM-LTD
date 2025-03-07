@@ -7,6 +7,7 @@ import Hero from "./pages/Hero";
 import AboutServices from "./pages/AboutServices";
 import AboutOwner from "./pages/AboutOwner";
 import Products from "./pages/Products";
+import Testimonials from "./components/Testimonials";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,8 @@ const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
       { path: "owner", element: <AboutOwner /> },
       { path: "products", element: <Products /> },
+      { path: "testimonials", element: <Testimonials /> },
+     
     ],
   },
 ]);

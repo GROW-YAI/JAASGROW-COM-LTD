@@ -62,7 +62,7 @@ const AboutOwner = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white to-green-100  ">
+    <div className="bg-green-50  ">
       {/* Header Section with Background Pattern */}
       <div className="container mx-auto px-4 pt-5 pb-10 relative ">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-green-800 mb-4">
@@ -127,8 +127,8 @@ const AboutOwner = () => {
         </div>
       </div>
 
-           {/* Achievements Section with Enhanced Cards */}
-           <div className="bg-gradient-to-b from-gray-50 to-white py-16">
+           {/* Achievements Section */}
+           <div className="bg-50  py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-green-800 mb-4">
@@ -142,7 +142,7 @@ const AboutOwner = () => {
               {achievements.map((achievement, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden group"
+                  className="bg-white rounded-xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden group "
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-green-700 rounded-bl-full -mr-16 -mt-16 transition-all duration-300 group-hover:bg-green-100"></div>
                   <div className="relative z-10">
@@ -167,7 +167,7 @@ const AboutOwner = () => {
       </div>
 
       {/* Co-founders Section */}
-      <div className="bg-gradient-to-b from-green-50 to-green-50 py-20">
+      <div className="bg-50 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -224,11 +224,11 @@ const AboutOwner = () => {
                         <p className="text-sm text-gray-500 font-medium">
                           Expertise
                         </p>
-                        <div className="flex flex-wrap gap-2 mt-1">
+                        <div className="flex flex-wrap gap-2 mt-1 mb-2">
                           {founder.expertise.map((skill, i) => (
                             <span
                               key={i}
-                              className="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs"
+                              className="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs shadow-lg"
                             >
                               {skill}
                             </span>
@@ -237,11 +237,7 @@ const AboutOwner = () => {
                       </div>
                     </div>
 
-                    <div className="mt-6 pb-4">
-                      <button className="w-full bg-white text-gray-600 border border-gray-300 rounded-full py-1.5 hover:bg-gray-50 transition-colors duration-200">
-                        Message
-                      </button>
-                    </div>
+                   
                   </div>
                 </div>
               ))}

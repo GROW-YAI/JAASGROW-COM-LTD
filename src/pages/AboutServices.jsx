@@ -117,14 +117,14 @@ import { FaLeaf, FaLightbulb, FaCheck, FaSeedling } from "react-icons/fa";
 
 const AboutServices = () => {
   return (
-    <div className="bg-gradient-to-b from-green-100 to-white py-20">
+    <div className="bg-green-100 py-20">
       {/* About Section */}
-      <div className="container mx-auto px-4 mb-20">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 mt-16 ">
+        <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-green-900 mb-6">
             About JAASGROW
           </h1>
-          <div className="w-52 h-1.5 bg-green-600 mx-auto rounded-full"></div>
+          <div className="w-52 h-1 bg-green-600 mx-auto rounded-full"></div>
         </div>
 
         {/* Overview Section */}
@@ -138,7 +138,7 @@ const AboutServices = () => {
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
                 At{" "}
-                <span className="font-semibold text-green-700">JAASGROW</span>, we
+                <span className="font-semibold text-green-700">JAASGROW Limited Company</span>, we
                 revolutionize farming with solutions that enhance yields by up to{" "}
                 <span className="font-semibold text-green-700">50%</span>.
               </p>
@@ -153,8 +153,8 @@ const AboutServices = () => {
           </div>
 
           {/* Image Container */}
-          <div className="md:w-1/2 relative">
-            <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+          <div className="md:w-1/2 relative ">
+            <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 ">
               <img
                 src={aboutImg} 
                 alt="Agriculture"
@@ -171,8 +171,8 @@ const AboutServices = () => {
       </div>
 
       {/* Services Grid Section */}
-      <div className="py-20 bg-gradient-to-b from-green-50 to-green-100">
-        <div className="container mx-auto px-4">
+      <div className="py-20 bg-green-100">
+        <div className="container mx-auto px-4 ">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center text-green-900 mb-16">
               Our Approach
@@ -208,7 +208,7 @@ const AboutServices = () => {
 
               {/* Values */}
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="text-green-600 text-4xl mb-6">
+                <div className="text-green-600 text-4xl ">
                   <FaSeedling />
                 </div>
                 <h3 className="text-2xl font-bold text-green-900 mb-4">
@@ -225,7 +225,7 @@ const AboutServices = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-gradient-to-b from-green-50 to-green-100">
+      <div className="bg-green-100 ">
       <div className="container mx-auto px-4 py-10  ">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-green-900 mb-16">

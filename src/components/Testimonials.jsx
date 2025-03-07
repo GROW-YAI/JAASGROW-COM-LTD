@@ -72,14 +72,14 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 bg-green-100">
-      <div className="container mx-auto px-4  ">
+    <section className="py-16 bg-green-50">
+      <div className="container mx-auto px-4 mt-16 ">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
             Our Success Stories
           </h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+          <div className="w-52 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             See how JAASGROW is transforming farms and improving yields across
             Ghana
@@ -87,101 +87,105 @@ const Testimonials = () => {
         </div>
 
         {/* Results Overview */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-green-800 rounded-xl p-8 text-center text-white">
-            <h3 className="text-2xl font-bold mb-6">Proven Results</h3>
+        <div className="max-w-3xl mx-auto mb-10 ">
+          <div className="bg-white rounded-xl p-4 text-center text-gray-900 shadow-lg">
+            <h3 className="text-xl font-bold mb-4">Proven Results</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <p className="text-green-200 mb-2">Average Yield Increase</p>
-                <p className="text-4xl font-bold">326%</p>
+                <p className="text-gray-900 mb-2">Average Yield Increase</p>
+                <div className="flex justify-center">
+                <p className="text-2xl font-bold border-green-800 rounded-full h-20  border-2 text-center items-center text-green-800 justify-center flex  w-20">326%</p>
+                </div>
+                
               </div>
               <div>
-                <p className="text-green-200 mb-2">Farms Impacted</p>
-                <p className="text-4xl font-bold">5+</p>
+                <p className="text-gray-900 mb-2 ">Farms Impacted</p>
+                <div className="flex justify-center">
+                <p className="text-2xl font-bold border-green-800 rounded-full h-20  border-2 text-center items-center text-green-800 justify-center flex  w-20">5+</p>
+                </div>
               </div>
               <div>
-                <p className="text-green-200 mb-2">Success Rate</p>
-                <p className="text-4xl font-bold">100%</p>
+                <p className="text-gray-900 mb-2 ">Success Rate</p>
+                <div className="flex justify-center">
+                <p className="text-2xl font-bold border-green-800 rounded-full h-20  border-2 text-center items-center text-green-800 justify-center flex  w-20">100%</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Testimonials List - Full Width */}
-        <div className="max-w-6xl mx-auto space-y-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex flex-col md:flex-row ">
-                {/* Image Section - Left Side */}
-                <div className="md:w-1/3 p-6 flex items-center justify-center">
-                  <div className="w-full aspect-square max-w-sm rounded-xl overflow-hidden">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Content Section - Right Side */}
-                <div className="md:w-2/3 p-8 bg-white rounded-r-xl">
-                  <div className="flex items-center mb-4">
-                    <div>
-                      <p className="font-semibold text-2xl text-gray-800 mb-1">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-gray-500 text-lg">
-                        {testimonial.role}
-                      </p>
-                    </div>
-                    <div className="flex text-yellow-400 ml-auto">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className="text-xl" />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex items-start mb-6">
-                    <FaQuoteLeft className="text-green-500 text-3xl mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      {testimonial.quote}
-                    </p>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="bg-green-50 rounded-lg p-6 mt-auto">
-                    <div className="grid grid-cols-3 gap-8 text-center">
-                      <div>
-                        <p className="text-sm text-gray-500 mb-1">Before</p>
-                        <p className="font-bold text-xl text-green-800">
-                          {testimonial.stats.before}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500 mb-1">After</p>
-                        <p className="font-bold text-xl text-green-800">
-                          {testimonial.stats.after}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500 mb-1">Increase</p>
-                        <p className="font-bold text-xl text-green-600">
-                          +{testimonial.stats.increase}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="max-w-6xl mx-auto space-y-4">
+  {testimonials.map((testimonial, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <div className="flex flex-col md:flex-row">
+        {/* Image Section - Left Side */}
+        <div className="md:w-1/4 p-3 flex items-center justify-center">
+          <div className="w-20 h-20 md:w-full md:h-52 rounded-lg overflow-hidden">
+            <img
+              src={testimonial.image}
+              alt={testimonial.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
+        {/* Content Section - Right Side */}
+        <div className="md:w-3/4 p-4">
+          <div className="flex items-center mb-2">
+            <div>
+              <p className="font-semibold text-lg text-gray-800 mb-1">
+                {testimonial.name}
+              </p>
+              <p className="text-gray-500 text-sm">{testimonial.role}</p>
+            </div>
+            <div className="flex text-yellow-400 ml-auto">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} className="text-md" />
+              ))}
+            </div>
+          </div>
+
+          <div className="flex items-start mb-2">
+            <FaQuoteLeft className="text-green-500 text-sm mr-2 mt-1 flex-shrink-0" />
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {testimonial.quote}
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="bg-green-100 rounded-lg p-3 shadow-lg">
+            <div className="grid grid-cols-3 gap-3 text-center">
+              <div>
+                <p className="text-sm text-gray-900 mb-1">Before</p>
+                <p className="font-bold text-md text-green-800">
+                  {testimonial.stats.before}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-900 mb-1">After</p>
+                <p className="font-bold text-md text-green-800">
+                  {testimonial.stats.after}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-900 mb-1">Increase</p>
+                <p className="font-bold text-md text-green-600">
+                  +{testimonial.stats.increase}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-8">
           <p className="text-gray-600 mb-6">
             Join these successful farmers and transform your yield today
           </p>

@@ -16,6 +16,7 @@ const Footer = () => {
     { name: "About Us", path: "/about" },
     { name: "Our Products", path: "/products" },
     { name: "Services", path: "/products" },
+    { name: "Testimonials", path: "/testimonials" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -131,7 +132,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="tel:+233246887818"
+                  to="tel:+233246887818"
                   className="flex items-center space-x-3 text-white hover:text-green-400 transition-colors duration-200"
                 >
                   <FaPhone />
@@ -170,7 +171,7 @@ const Footer = () => {
                 Privacy Policy
               </Link>
               <Link
-                to="/#"
+                to="/"
                 className="hover:text-green-400 transition-colors duration-200"
               >
                 Terms of Service

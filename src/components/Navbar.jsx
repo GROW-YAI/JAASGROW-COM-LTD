@@ -81,7 +81,7 @@ const Navbar = () => {
               <div>
                 <span className="font-bold text-[#fbf4d8] text-xl">
                   Jaas
-                  <span className="text-[rgb(120,221,61)] italic ">GROW</span>
+                  <span className="text-[rgb(40,230,88)] italic ">GROW</span>
                 </span>
               </div>
             </div>
@@ -99,6 +99,9 @@ const Navbar = () => {
               </NavLink>
               <NavLink to="/products" className={getLinkClass("/products")}>
                 Services
+              </NavLink>
+              <NavLink to="/testimonials" className={getLinkClass("/testimonials")}>
+              Testimonials
               </NavLink>
               <NavLink to="/contact" className={getLinkClass("/contact")}>
                 Contact
@@ -158,6 +161,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Services
+            </NavLink>
+            <NavLink
+              to="/testimonials"
+              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+             Testimonials
             </NavLink>
             <NavLink
               to="/contact"

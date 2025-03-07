@@ -56,13 +56,13 @@ ${message}
 
   return (
     <div className="bg-gray-100 py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 mt-16">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
             Contact JAASGROW
           </h1>
-          <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+          <div className="w-52 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Let's discuss how our innovative organic solutions can transform
             your farming practices
