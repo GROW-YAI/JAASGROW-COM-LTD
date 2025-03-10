@@ -15,8 +15,6 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(0);
 
-  
-
   // const services = [
   //   {
   //     icon: <FaSeedling className="text-4xl text-green-600" />,
@@ -90,7 +88,6 @@ const Products = () => {
         recommended_for: "Vegetables and fruit crops",
       },
     },
-   
   ];
 
   return (
@@ -108,14 +105,20 @@ const Products = () => {
         </div>
 
         {/* Products and Description Layout */}
-        <div >
+        <div>
           <div className="flex flex-col md:flex-col gap-10">
             {/* Products List - up */}
 
-            <motion.div className="flex gap-10 justify-center  "
-             initial={{ x: -100 }}
-             animate={{ x: 0 }}
-             transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}>
+            <motion.div
+              className="flex gap-10 justify-center  "
+              initial={{ x: -100 }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
               <div className="w-64 h-64 md:w-80 md:h-80 flex items-center  ">
                 <img
                   src={fert2}
@@ -129,8 +132,8 @@ const Products = () => {
                   alt={"Assase Aduane"}
                   className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-lg border-4 border-green-800 m-0.5"
                 />
-               </div>
-               <div className="w-64 h-64 md:w-80 md:h-80 flex items-center ">
+              </div>
+              <div className="w-64 h-64 md:w-80 md:h-80 flex items-center ">
                 <img
                   src={fert2}
                   alt={"Assase Aduane"}
@@ -143,9 +146,8 @@ const Products = () => {
                   alt={"Assase Aduane"}
                   className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-lg border-4 border-green-800 m-0.5"
                 />
-               </div>
-               </motion.div>
-
+              </div>
+            </motion.div>
 
             {/* Product Details - down */}
             <div className="mt-2 mx-auto ">
@@ -230,12 +232,11 @@ const Products = () => {
 
                   {/* Call to Action */}
                   <div className="pt-6 border-t">
-                    <Link to='/contact'>
-                    <button className="w-full bg-green-600 text-white py-4 rounded-xl hover:bg-green-700 transition-colors duration-300 text-lg font-semibold">
-                      Request Product Information
-                    </button>
+                    <Link to="/contact">
+                      <button className="w-full bg-green-600 text-white py-4 rounded-xl hover:bg-green-700 transition-colors duration-300 text-lg font-semibold">
+                        Request Product Information
+                      </button>
                     </Link>
-                    
                   </div>
                 </div>
               </div>

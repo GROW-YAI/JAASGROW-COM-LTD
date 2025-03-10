@@ -9,7 +9,7 @@ const AboutOwner = () => {
   const achievements = [
     {
       icon: <FaLeaf />,
-      title: "Innovation Leader",
+      title: "Innovation Leader and Business Developer",
       description:
         "Created Asaase Aduane, a revolutionary 3-in-1 organic farming solution",
       highlight: "50% yield increase",
@@ -18,7 +18,7 @@ const AboutOwner = () => {
       icon: <FaLightbulb />,
       title: "Agricultural Expert",
       description:
-        "Pioneering sustainable farming practices in Ghana's agricultural sector",
+        "Pioneering sustainable farming practices in Ghana's agricultural sector with 6 years experience in pest and insect control",
       highlight: "Eco-friendly solutions",
     },
     {
@@ -32,32 +32,28 @@ const AboutOwner = () => {
 
   const founders = [
     {
-      name: "Suleman Mohammed",
-      role: "Biomedical Researcher",
-      image: cofounder1,
-      description: "Data Analyst, CoBreg fellow, IBM Certified Data Analyst",
-      expertise: ["Digital Marketing", "Content Strategy", "Market Research"],
-      education: "BSc. Agriculture Technology",
+      name: "Abdul Mueez Otoo",
+      role: "Operations/ Technical",
+      image: cofounder2,
+      expertise: [" Entrpreneur Digatal Marketing"],
     },
     {
-      name: "Abdul Mueez Owusu",
-      role: "CEO of MIEL 247 ENTERPRISE",
-      image: cofounder2,
-      description: "Operations & Technical Manager",
-      expertise: ["Operations", "Technical Management", "Business Development"],
-      education: "BSc. Agriculture Science",
+     
+      name: "Sulemana Mohammed",
+      role: "Product Development",
+      image: cofounder1,
+      expertise: ["Biomedical Scientist", "Quality Control and Product Development"],
     },
     {
       name: "Ayishatu Ameen",
-      role: "ESG Analyst",
+      role: "Sales/ Marketing",
       image: cofounder3,
-      description: "Climate Action| Environmental Sustainability Specialist",
       expertise: [
-        "Environmental Sustainability",
-        "Climate Action",
-        "ESG Analysis",
+        "Youth Advocate",
+        "Agricultural Economist",
+       
       ],
-      education: "BSc. Environmental Science",
+     
     },
   ];
 
@@ -96,11 +92,14 @@ const AboutOwner = () => {
               </h2>
               <div className="space-y-4 text-gray-700 relative z-10">
                 <p className="leading-relaxed text-lg">
-                  A visionary agricultural innovator from{" "}
-                  <span className="font-semibold text-green-700">
+                  A <span className="font-semibold text-green-700">
+                  Biomedical Researcher{" "} 
+                    </span> 
+                    and  visionary agricultural innovator {" "}
+                  {/* <span className="font-semibold text-green-700">
                     Cape Coast, Central Region
-                  </span>
-                  , Justice is revolutionizing farming practices through
+                  </span> */}
+               revolutionizing farming practices through
                   sustainable solutions. His dedication to agricultural
                   innovation has led to the development of groundbreaking
                   organic farming technologies.
@@ -213,13 +212,7 @@ const AboutOwner = () => {
                     </div>
 
                     <div className="mt-4 space-y-3">
-                      <div>
-                        <p className="text-sm text-gray-500 font-medium">
-                          Education
-                        </p>
-                        <p className="text-gray-700">{founder.education}</p>
-                      </div>
-
+                      
                       <div>
                         <p className="text-sm text-gray-500 font-medium">
                           Expertise

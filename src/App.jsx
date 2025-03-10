@@ -12,9 +12,9 @@ import Testimonials from "./components/Testimonials";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />, // This wraps all the child routes
+    element: <RootLayout />, 
     children: [
-      { index: true, element: <Home /> }, // Default homepage
+      { index: true, element: <Home /> }, 
       { path: "hero", element: <Hero /> },
       { path: "about", element: <AboutServices /> },
       { path: "contact", element: <Contact /> },

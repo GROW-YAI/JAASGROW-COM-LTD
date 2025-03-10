@@ -37,25 +37,29 @@ const Navbar = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className=" w-full z-30 top-0 left-0 fixed md:block bg-black/70 backdrop-blur-sm text-white animate-pulse  h-[8vh] pt-4 ">
-        <div className="container mx-auto px-2  flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-4">
+      <div className="w-full z-30 top-0 left-0 fixed md:block bg-black/70 text-white h-[8vh] pt-4 hidden">
+        <div className="container mx-auto px-2 flex justify-between items-center text-sm">
+          <div className="flex items-center space-x-4 overflow-x-auto">
             <Link
               to="tel:+233246887818"
-              className="flex items-center space-x-2 hover:text-green-300"
+              className="flex items-center space-x-2 hover:text-green-300 whitespace-nowrap"
             >
               <FaPhone className="text-xs" />
-              <span>+233 246 887 818, +233 553 115 662</span>
+              <span className="text-xs md:text-sm">
+                +233 246 887 818, +233 553 115 662
+              </span>
             </Link>
             <Link
               to="mailto:jaasgrowcompanyltd@gmail.com"
-              className="flex items-center space-x-2 hover:text-green-300"
+              className="flex items-center space-x-2 hover:text-green-300 whitespace-nowrap"
             >
               <FaEnvelope className="text-xs" />
-              <span>jaasgrowcompanyltd@gmail.com</span>
+              <span className="text-xs md:text-sm">
+                jaasgrowcompanyltd@gmail.com
+              </span>
             </Link>
           </div>
-          <div className="text-green-200">
+          <div className="text-green-200 text-xs md:text-sm hidden md:block">
             Transforming Agriculture Through Innovation
           </div>
         </div>
@@ -63,7 +67,9 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav
-        className={`fixed w-full mt-10 top-0 left-0 z-40  transition-all duration-300 ${
+        className={`fixed w-full ${
+          isScrolled ? "mt-0" : "mt-0 md:mt-10"
+        } top-0 left-0 z-40 transition-all duration-300 ${
           isScrolled
             ? "bg-green-900/85 backdrop-blur-sm shadow-lg py-2"
             : "bg-green-900 py-4"
@@ -76,12 +82,15 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="JAASGROW"
-                className="h-12 w-12 object-contain"
+                className="h-8 w-8 md:h-12 md:w-12 object-contain"
               />
               <div>
-                <span className="font-bold text-[#fbf4d8] text-xl">
-                  Jaas
-                  <span className="text-[rgb(40,230,88)] italic ">GROW</span>
+                <span className="font-bold text-[#fbf4d8] text-sm md:text-xl">
+                  JAAS
+                  <span className="text-[rgb(40,230,88)] italic">
+                    GROW
+                  </span>{" "}
+                  <span className="hidden md:inline">Company Limited</span>
                 </span>
               </div>
             </div>
@@ -100,8 +109,11 @@ const Navbar = () => {
               <NavLink to="/products" className={getLinkClass("/products")}>
                 Services
               </NavLink>
-              <NavLink to="/testimonials" className={getLinkClass("/testimonials")}>
-              Testimonials
+              <NavLink
+                to="/testimonials"
+                className={getLinkClass("/testimonials")}
+              >
+                Testimonials
               </NavLink>
               <NavLink to="/contact" className={getLinkClass("/contact")}>
                 Contact
@@ -115,11 +127,12 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className="md:hidden text-white focus:outline-none"
+              aria-label="Toggle menu"
             >
               {isOpen ? (
-                <FaTimes className="h-6 w-6" />
+                <FaTimes className="h-5 w-5" />
               ) : (
-                <FaBars className="h-6 w-6" />
+                <FaBars className="h-5 w-5" />
               )}
             </button>
           </div>
@@ -127,56 +140,91 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden transition-all duration-300 ${
+          className={`md:hidden transition-all duration-300 absolute w-full ${
             isOpen
-              ? "opacity-100 visible max-h-96"
-              : "opacity-0 invisible max-h-0"
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible -translate-y-2"
           }`}
         >
-          <div className="bg-green-800 px-4 py-2 space-y-1">
+          <div className="bg-green-800 px-4 py-2 space-y-1 shadow-lg">
             <NavLink
               to="/"
-              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              className={({ isActive }) =>
+                `block py-3 px-4 text-sm ${
+                  isActive
+                    ? "text-white bg-green-700"
+                    : "text-gray-200 hover:text-white hover:bg-green-700"
+                } rounded transition-colors duration-200`
+              }
               onClick={() => setIsOpen(false)}
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
-              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              className={({ isActive }) =>
+                `block py-3 px-4 text-sm ${
+                  isActive
+                    ? "text-white bg-green-700"
+                    : "text-gray-200 hover:text-white hover:bg-green-700"
+                } rounded transition-colors duration-200`
+              }
               onClick={() => setIsOpen(false)}
             >
               About Us
             </NavLink>
             <NavLink
               to="/products"
-              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              className={({ isActive }) =>
+                `block py-3 px-4 text-sm ${
+                  isActive
+                    ? "text-white bg-green-700"
+                    : "text-gray-200 hover:text-white hover:bg-green-700"
+                } rounded transition-colors duration-200`
+              }
               onClick={() => setIsOpen(false)}
             >
               Products
             </NavLink>
             <NavLink
               to="/products"
-              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              className={({ isActive }) =>
+                `block py-3 px-4 text-sm ${
+                  isActive
+                    ? "text-white bg-green-700"
+                    : "text-gray-200 hover:text-white hover:bg-green-700"
+                } rounded transition-colors duration-200`
+              }
               onClick={() => setIsOpen(false)}
             >
               Services
             </NavLink>
             <NavLink
               to="/testimonials"
-              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              className={({ isActive }) =>
+                `block py-3 px-4 text-sm ${
+                  isActive
+                    ? "text-white bg-green-700"
+                    : "text-gray-200 hover:text-white hover:bg-green-700"
+                } rounded transition-colors duration-200`
+              }
               onClick={() => setIsOpen(false)}
             >
-             Testimonials
+              Testimonials
             </NavLink>
             <NavLink
               to="/contact"
-              className="block py-2 text-gray-200 hover:text-white hover:bg-green-700 rounded px-3 transition-colors duration-200"
+              className={({ isActive }) =>
+                `block py-3 px-4 text-sm ${
+                  isActive
+                    ? "text-white bg-green-700"
+                    : "text-gray-200 hover:text-white hover:bg-green-700"
+                } rounded transition-colors duration-200`
+              }
               onClick={() => setIsOpen(false)}
             >
               Contact
             </NavLink>
-           
           </div>
         </div>
       </nav>
@@ -185,5 +233,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

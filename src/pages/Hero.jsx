@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden ">
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0">
         <img
@@ -18,8 +18,8 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
-        <div className="max-w-3xl text-white">
+      <div className="relative z-10 container mx-auto px-4  h-full flex items-center ">
+        <div className="max-w-3xl text-white ">
           {/* Tagline */}
 
           {/* Main Heading */}
@@ -39,7 +39,7 @@ const Hero = () => {
           </p>
 
           {/* Key Features */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 w-[60vw] ">
             {[
               {
                 icon: "🌱",
@@ -48,8 +48,8 @@ const Hero = () => {
               },
               {
                 icon: "🛡️",
-                title: "Dual Action",
-                desc: "Fertilizer & pesticide combined",
+                title: "Triple Effect",
+                desc: "Fertilizer, pesticide & soil amendment combined",
               },
               {
                 icon: "📈",
@@ -59,7 +59,7 @@ const Hero = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 transition hover:scale-105"
               >
                 <div className="text-2xl mb-2 ">{feature.icon}</div>
                 <h3 className="font-semibold text-lg">{feature.title}</h3>
@@ -72,20 +72,20 @@ const Hero = () => {
 
       {/* Bottom Banner */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="bg-gradient-to-r from-green-800 to-green-700 rounded-lg w-full sm:w-[60%]">
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex flex-col sm:flex-row items-center justify-between text-white">
+        <div className="bg-gradient-to-r from-green-800 to-green-700 rounded-lg w-[80%] h-[10vh] md-[10vh] md:w-[50%]">
+          <div className="max-w-7xl mx-auto px-6 py-4  ">
+            <div className="flex  sm:flex-row items-center flex-col justify-between text-white ">
               <div className="flex items-center space-x-3">
                
                 <div>
-                  
-                  <span className="text-green-200 text-lg sm:text-xl">
+
+                  <span className="text-green-200 text-sm  sm:text-xl ">
                     "Do Not Waste The Waste"
                   </span>
                 </div>
               </div>
               <Link to='/contact'>
-              <button className="mt-4 sm:mt-0 bg-white text-green-800 px-6 py-3 rounded-full hover:bg-green-100 transition-colors duration-300 font-semibold shadow-lg">
+              <button className=" md:mb-4  sm:mt-0 bg-white text-green-800  py-2 px-6 rounded-full hover:bg-green-100 transition-colors duration-300 font-semibold shadow-lg">
                 Contact Us
               </button>
               </Link>
