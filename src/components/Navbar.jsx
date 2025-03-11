@@ -45,18 +45,14 @@ const Navbar = () => {
               className="flex items-center space-x-2 hover:text-green-300 whitespace-nowrap"
             >
               <FaPhone className="text-xs" />
-              <span className="text-xs md:text-sm">
-                +233 246 887 818, +233 553 115 662
-              </span>
+              <span className="text-xs md:text-sm">+233 246 887 818, +233 553 115 662</span>
             </Link>
             <Link
               to="mailto:jaasgrowcompanyltd@gmail.com"
               className="flex items-center space-x-2 hover:text-green-300 whitespace-nowrap"
             >
               <FaEnvelope className="text-xs" />
-              <span className="text-xs md:text-sm">
-                jaasgrowcompanyltd@gmail.com
-              </span>
+              <span className="text-xs md:text-sm">jaasgrowcompanyltd@gmail.com</span>
             </Link>
           </div>
           <div className="text-green-200 text-xs md:text-sm hidden md:block">
@@ -69,7 +65,7 @@ const Navbar = () => {
       <nav
         className={`fixed w-full ${
           isScrolled ? "mt-0" : "mt-0 md:mt-10"
-        } top-0 left-0 z-40 transition-all duration-300 ${
+        } top-0 left-0 z-40 transition-all duration-300  ${
           isScrolled
             ? "bg-green-900/85 backdrop-blur-sm shadow-lg py-2"
             : "bg-green-900 py-4"
@@ -87,9 +83,7 @@ const Navbar = () => {
               <div>
                 <span className="font-bold text-[#fbf4d8] text-sm md:text-xl">
                   JAAS
-                  <span className="text-[rgb(40,230,88)] italic">
-                    GROW
-                  </span>{" "}
+                  <span className="text-[rgb(40,230,88)] italic">GROW</span>{" "}
                   <span className="hidden md:inline">Company Limited</span>
                 </span>
               </div>
@@ -140,7 +134,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden transition-all duration-300 absolute w-full ${
+          className={`md:hidden transition-all duration-300 absolute w-full  ${
             isOpen
               ? "opacity-100 visible translate-y-0"
               : "opacity-0 invisible -translate-y-2"

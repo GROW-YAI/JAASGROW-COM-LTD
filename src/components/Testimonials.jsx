@@ -75,122 +75,145 @@ const Testimonials = () => {
     <section className="py-16 bg-green-50">
       <div className="container mx-auto px-4 mt-16 ">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
-            Our Success Stories
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-800 mb-4">
+            Success Stories
           </h2>
-          <div className="w-52 h-1 bg-green-600 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            See how JAASGROW is transforming farms and improving yields across
-            Ghana
+          <div className="w-32 sm:w-40 h-1 bg-green-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+            See how JAASGROW has transformed farming practices and improved
+            yields
           </p>
         </div>
 
-        {/* Results Overview */}
-        <div className="max-w-3xl mx-auto mb-10 ">
-          <div className="bg-white rounded-xl p-4 text-center text-gray-900 shadow-lg">
-            <h3 className="text-xl font-bold mb-4">Proven Results</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Results Overview */}
+      <div className="max-w-3xl mx-auto mb-10 
+        ">
+          <div className="bg-white rounded-xl 
+          p-4 text-center text-gray-900 
+          shadow-lg">
+            <h3 className="text-xl font-bold 
+            mb-4">Proven Results</h3>
+            <div className="grid grid-cols-1 
+            md:grid-cols-3 gap-8">
               <div>
-                <p className="text-gray-900 mb-2">Average Yield Increase</p>
-                <div className="flex justify-center">
-                <p className="text-2xl font-bold border-green-800 rounded-full h-20  border-2 text-center items-center text-green-800 justify-center flex  w-20">326%</p>
+                <p className="text-gray-900 
+                mb-2">Average Yield Increase</p>
+                <div className="flex 
+                justify-center">
+                <p className="text-2xl 
+                font-bold border-green-800 
+                rounded-full h-20  border-2 
+                text-center items-center 
+                text-green-800 justify-center 
+                flex  w-20">326%</p>
                 </div>
                 
               </div>
               <div>
-                <p className="text-gray-900 mb-2 ">Farms Impacted</p>
-                <div className="flex justify-center">
-                <p className="text-2xl font-bold border-green-800 rounded-full h-20  border-2 text-center items-center text-green-800 justify-center flex  w-20">5+</p>
+                <p className="text-gray-900 
+                mb-2 ">Farms Impacted</p>
+                <div className="flex 
+                justify-center">
+                <p className="text-2xl 
+                font-bold border-green-800 
+                rounded-full h-20  border-2 
+                text-center items-center 
+                text-green-800 justify-center 
+                flex  w-20">5+</p>
                 </div>
               </div>
               <div>
-                <p className="text-gray-900 mb-2 ">Success Rate</p>
-                <div className="flex justify-center">
-                <p className="text-2xl font-bold border-green-800 rounded-full h-20  border-2 text-center items-center text-green-800 justify-center flex  w-20">100%</p>
+                <p className="text-gray-900 
+                mb-2 ">Success Rate</p>
+                <div className="flex 
+                justify-center">
+                <p className="text-2xl 
+                font-bold border-green-800 
+                rounded-full h-20  border-2 
+                text-center items-center 
+                text-green-800 justify-center 
+                flex  w-20">100%</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-4 grid grid-cols-2 gap-10">
-  {testimonials.map((testimonial, index) => (
-    <div
-      key={index}
-      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 md:h-52 h-52 "
-    >
-      <div className="flex flex-col md:flex-row">
-        {/* Image Section - Left Side */}
-        <div className="md:w-1/4 p-3 flex items-center justify-center">
-          <div className="w-20 h-20 md:w-full md:h-48 rounded-lg overflow-hidden">
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300"
+            >
+              {/* Profile Section */}
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 text-lg sm:text-xl mb-1">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm sm:text-base">
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+
+              {/* Quote */}
+              <div className="mb-6">
+                <FaQuoteLeft className="text-green-500 text-xl sm:text-3xl mb-3" />
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {testimonial.quote}
+                </p>
+              </div>
+
+              {/* Stats */}
+              <div className="bg-green-50 rounded-lg p-4 sm:p-5">
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <p className="text-sm sm:text-base text-gray-600 mb-2">
+                      Before
+                    </p>
+                    <p className="font-bold text-base sm:text-lg text-green-800">
+                      {testimonial.stats.before}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm sm:text-base text-gray-600 mb-2">
+                      After
+                    </p>
+                    <p className="font-bold text-base sm:text-lg text-green-800">
+                      {testimonial.stats.after}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm sm:text-base text-gray-600 mb-2">
+                      Increase
+                    </p>
+                    <p className="font-bold text-base sm:text-lg text-green-800">
+                      +{testimonial.stats.increase}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-
-        {/* Content Section - Right Side */}
-        <div className="md:w-3/4 p-4">
-          <div className="flex items-center mb-2">
-            <div>
-              <p className="font-semibold text-lg text-gray-800 mb-1">
-                {testimonial.name}
-              </p>
-              <p className="text-gray-500 text-sm">{testimonial.role}</p>
-            </div>
-            <div className="flex text-yellow-400 ml-auto">
-              {[...Array(5)].map((_, i) => (
-                <FaStar key={i} className="text-md" />
-              ))}
-            </div>
-          </div>
-
-          <div className="flex items-start mb-2">
-            <FaQuoteLeft className="text-green-500 text-sm mr-2 mt-1 flex-shrink-0" />
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {testimonial.quote}
-            </p>
-          </div>
-
-          {/* Stats */}
-          <div className="bg-green-100 rounded-lg p-3 shadow-lg">
-            <div className="grid grid-cols-3 gap-3 text-center">
-              <div>
-                <p className="text-sm text-gray-900 mb-1">Before</p>
-                <p className="font-bold text-md text-green-800">
-                  {testimonial.stats.before}
-                </p>
-              </div>
-              <div>
-                <p className="text-xs text-gray-900 mb-1">After</p>
-                <p className="font-bold text-md text-green-800">
-                  {testimonial.stats.after}
-                </p>
-              </div>
-              <div>
-                <p className="text-xs text-gray-900 mb-1">Increase</p>
-                <p className="font-bold text-md text-green-800">
-                  +{testimonial.stats.increase}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
 
         {/* Call to Action */}
-        <div className="text-center mt-8">
-          <p className="text-gray-600 mb-6">
+        <div className="text-center mt-12 sm:mt-16">
+          <p className="text-gray-600 mb-6 text-sm sm:text-base">
             Join these successful farmers and transform your yield today
           </p>
           <Link to="/contact">
-            <button className="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition-colors duration-300 font-semibold">
+            <button className="bg-green-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-green-700 transition-colors duration-300 text-sm sm:text-base font-semibold shadow-lg">
               Contact Us
             </button>
           </Link>

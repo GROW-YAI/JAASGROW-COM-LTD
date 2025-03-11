@@ -5,41 +5,37 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen overflow-hidden ">
+    <div className="relative h-screen overflow-hidden">
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0">
         <img
           src={herovideo}
           alt="Sustainable Farming"
-          className="w-full h-full object-cover transform scale-105  motion-safe:animate-subtle-zoom"
+          className="w-full h-full object-cover transform scale-105 motion-safe:animate-subtle-zoom"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-green-50/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-green-50/20" />
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-4  h-full flex items-center ">
-        <div className="max-w-3xl text-white ">
-          {/* Tagline */}
-
+      <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
+        <div className="max-w-3xl text-white mt-16 md:mt-32 lg:mt-0">
           {/* Main Heading */}
-         
-            <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-200 text-3xl md:text-5xl">
-              JAASGROW Limited Company{" " }
-              <span className="inline-block  text-green-100 md:text-2xl  text-3xl  pb-14">
-                    The Farmers' Choice
-                  </span>
-            </h1>
-           
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-200 text-2xl sm:text-3xl md:text-5xl font-bold">
+            JAASGROW Limited Company{" "}
+            <span className="block text-green-100 text-lg sm:text-xl md:text-2xl pb-2 sm:pb-6 md:pb-8 mt-2">
+              The Farmers' Choice
+            </span>
+          </h1>
 
           {/* Mission Statement */}
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 text-gray-200 max-w-2xl leading-relaxed pr-4 sm:pr-8">
             Nurture the Earth, Empower Farmers, Promote Environmentally
             Sustainable Agriculture
           </p>
 
           {/* Key Features */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 w-[60vw] ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full sm:w-[90vw] md:w-[60vw] mb-8 sm:mb-12">
             {[
               {
                 icon: "🌱",
@@ -59,11 +55,17 @@ const Hero = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 transition hover:scale-105"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 transition hover:scale-105"
               >
-                <div className="text-2xl mb-2 ">{feature.icon}</div>
-                <h3 className="font-semibold text-lg">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.desc}</p>
+                <div className="text-xl sm:text-2xl mb-1 sm:mb-2">
+                  {feature.icon}
+                </div>
+                <h3 className="font-semibold text-sm sm:text-base">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-xs sm:text-sm">
+                  {feature.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -71,25 +73,17 @@ const Hero = () => {
       </div>
 
       {/* Bottom Banner */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="bg-gradient-to-r from-green-800 to-green-700 rounded-lg w-[80%] h-[10vh] md-[10vh] md:w-[50%]">
-          <div className="max-w-7xl mx-auto px-6 py-4  ">
-            <div className="flex  sm:flex-row items-center flex-col justify-between text-white ">
-              <div className="flex items-center space-x-3">
-               
-                <div>
-
-                  <span className="text-green-200 text-sm  sm:text-xl ">
-                    "Do Not Waste The Waste"
-                  </span>
-                </div>
-              </div>
-              <Link to='/contact'>
-              <button className=" md:mb-4  sm:mt-0 bg-white text-green-800  py-2 px-6 rounded-full hover:bg-green-100 transition-colors duration-300 font-semibold shadow-lg">
+      <div className="absolute bottom-0 left-0 right-0 z-10 ">
+        <div className="bg-gradient-to-r from-green-800 to-green-700 rounded-lg  w-full sm:w-[80%] md:w-[50%] p-3 sm:p-4 ">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 px-4">
+            <span className="text-green-200 text-sm sm:text-base md:text-xl text-center sm:text-left">
+              "Do Not Waste The Waste"
+            </span>
+            <Link to="/contact">
+              <button className="w-full sm:w-auto bg-white text-green-800 px-6 py-2 rounded-full hover:bg-green-100 transition-colors duration-300 text-sm sm:text-base font-semibold shadow-lg">
                 Contact Us
               </button>
-              </Link>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

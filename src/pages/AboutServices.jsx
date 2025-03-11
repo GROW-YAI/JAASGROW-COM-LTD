@@ -180,29 +180,33 @@ const AboutServices = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {/* Mission */}
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="text-green-600 text-4xl mb-6">
+                <div className="text-green-600 text-4xl mb-2">
                   <FaLeaf />
                 </div>
-                <h3 className="text-2xl font-bold text-green-900 mb-4">
+                <h3 className="text-2xl font-bold text-green-900 mb-2">
                   Our Mission
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Empowering farmers with sustainable solutions for improved
-                  crop yields and ecological farming practices.
+                To produce the highest quality organic fertilizer possible through highly skilled 
+and dedicated management and a rigorous manufacturing process, as well as to put fertilizers 
+within reach of every farmer and agrochemical seller both locally and internationally, in order 
+to inspire and nurture the plant and farmer spirit.
                 </p>
               </div>
 
               {/* Vision */}
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                <div className="text-green-600 text-4xl mb-6">
+                <div className="text-green-600 text-4xl mb2">
                   <FaLightbulb />
                 </div>
-                <h3 className="text-2xl font-bold text-green-900 mb-4">
+                <h3 className="text-2xl font-bold text-green-900 mb-2">
                   Our Vision
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Leading Africa's agricultural transformation through
-                  innovative, eco-friendly farming solutions.
+              Centred on three key players; the farmer, the crops and the soil. We 
+hope to be a world class manufacturer of fertilizer with focus on safety, quality and 
+effectiveness, thereby serving as a gateway to sustaining environmentally friendly agriculture 
+and genuine and safe food system
                 </p>
               </div>
 
@@ -211,7 +215,7 @@ const AboutServices = () => {
                 <div className="text-green-600 text-4xl ">
                   <FaSeedling />
                 </div>
-                <h3 className="text-2xl font-bold text-green-900 mb-4">
+                <h3 className="text-2xl font-bold text-green-900 mb-2">
                   Our Values
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
