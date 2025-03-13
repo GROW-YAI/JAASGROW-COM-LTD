@@ -160,7 +160,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <p>
-              © {new Date().getFullYear()} JAASGROW Limited Company. All rights
+              © {new Date().getFullYear()} JAASGROW LIMITED COMPANY. All rights
               reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">

@@ -83,8 +83,8 @@ const Navbar = () => {
               <div>
                 <span className="font-bold text-[#fbf4d8] text-sm md:text-xl">
                   JAAS
-                  <span className="text-[rgb(40,230,88)] italic">GROW</span>{" "}
-                  <span className="hidden md:inline">Company Limited</span>
+                  <span className="text-[rgb(40,230,88)] italic">GROW</span> {"  "}
+                  <span className="hidden md:inline ">COMPANY     LIMITED</span>
                 </span>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLeaf } from "react-icons/fa";
+
 import herovideo from "@/assets/video/cropgrow.gif";
 import { Link } from "react-router-dom";
 
@@ -19,10 +19,10 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
-        <div className="max-w-3xl text-white mt-16 md:mt-32 lg:mt-0">
+        <div className="max-w-3xl text-white mt-32 md:mt-32 lg:mt-0">
           {/* Main Heading */}
           <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-200 text-2xl sm:text-3xl md:text-5xl font-bold">
-            JAASGROW Limited Company{" "}
+            JAASGROW LIMITED COMPANY{" "}
             <span className="block text-green-100 text-lg sm:text-xl md:text-2xl pb-2 sm:pb-6 md:pb-8 mt-2">
               The Farmers' Choice
             </span>
@@ -44,7 +44,7 @@ const Hero = () => {
               },
               {
                 icon: "🛡️",
-                title: "Triple Effect",
+                title: "Multiple Effect",
                 desc: "Fertilizer, pesticide & soil amendment combined",
               },
               {
@@ -73,7 +73,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Banner */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 ">
+      <div className="absolute bottom-0 left-0 right-0 z-10  ">
         <div className="bg-gradient-to-r from-green-800 to-green-700 rounded-lg  w-full sm:w-[80%] md:w-[50%] p-3 sm:p-4 ">
           <div className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 px-4">
             <span className="text-green-200 text-sm sm:text-base md:text-xl text-center sm:text-left">
