@@ -502,6 +502,50 @@ const AboutServices = () => {
                     </div>
                   </div>
                 </div>
+               
+                <div
+                  className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div className="h-2 bg-green-500 "></div>
+
+                  {/* Profile Section */}
+                  <div className="px-4 relative py-2">
+                    <div className="relative w-32 h-32 group overflow-hidden rounded-full border-2 border-green-400 shadow-lg">
+                      <img
+                        src={cofounder3}
+                        alt={"Ayisha"}
+                        className="w-full h-full object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-[3] group-hover:translate-x-[20px] group-hover:translate-y-[100px] "
+                      />
+                    </div>
+                    <div className="pt-3">
+                      <h3 className="text-xl font-bold text-gray-900">
+                      Ayishatu Ameen
+                      </h3>
+                      <p className="text-gray-600 font-medium">
+                      Sales/ Marketing
+                      </p>
+                    </div>
+                    <div className="mt-4 space-y-3">
+                      <div>
+                        <p className="text-sm text-gray-500 font-medium">
+                          Expertise
+                        </p>
+                        <div className="flex flex-wrap gap-2 mt-1 mb-4 ">
+                            <p
+                           
+                              className="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs shadow-lg"
+                            > Youth Advocate
+                            </p>
+                            <p
+                           
+                              className="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs shadow-lg"
+                            > Agricultural Economist
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div
                   className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
                 >
@@ -540,49 +584,6 @@ const AboutServices = () => {
                            
                               className="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs shadow-lg"
                             >Quality Control and Product Development
-                            </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="h-2 bg-green-500 "></div>
-
-                  {/* Profile Section */}
-                  <div className="px-4 relative py-2">
-                    <div className="relative w-32 h-32 group overflow-hidden rounded-full border-2 border-green-400 shadow-lg">
-                      <img
-                        src={cofounder3}
-                        alt={"Ayisha"}
-                        className="w-full h-full object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-[3] group-hover:translate-x-[20px] group-hover:translate-y-[100px] "
-                      />
-                    </div>
-                    <div className="pt-3">
-                      <h3 className="text-xl font-bold text-gray-900">
-                      Ayishatu Ameen
-                      </h3>
-                      <p className="text-gray-600 font-medium">
-                      Sales/ Marketing
-                      </p>
-                    </div>
-                    <div className="mt-4 space-y-3">
-                      <div>
-                        <p className="text-sm text-gray-500 font-medium">
-                          Expertise
-                        </p>
-                        <div className="flex flex-wrap gap-2 mt-1 mb-4 ">
-                            <p
-                           
-                              className="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs shadow-lg"
-                            > Youth Advocate
-                            </p>
-                            <p
-                           
-                              className="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs shadow-lg"
-                            > Agricultural Economist
                             </p>
                         </div>
                       </div>
