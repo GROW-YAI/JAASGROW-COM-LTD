@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen overflow-hidden">
+    // <div className="relative h-screen overflow-hidden">
+    <div className="relative min-h-[100svh] sm:min-h-[100dvh] overflow-visible pb-20"> 
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0">
         <img
