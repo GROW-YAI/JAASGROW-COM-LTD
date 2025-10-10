@@ -157,13 +157,13 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-green-800">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+       <div className="max-w-7xl mx-auto px-4 py-6">
+       <div className="flex justify-center items-center text-sm text-gray-400 text-center">
             <p>
               © {new Date().getFullYear()} JAASGROW LIMITED COMPANY. All rights
               reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            {/* <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 to="/#"
                 className="hover:text-green-400 transition-colors duration-200"
@@ -176,7 +176,7 @@ const Footer = () => {
               >
                 Terms of Service
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
