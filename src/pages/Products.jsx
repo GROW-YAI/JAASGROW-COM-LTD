@@ -91,8 +91,8 @@ const Products = () => {
   ];
 
   return (
-    <section className="bg-green-100 py-16">
-      <div className="max-w-6xl mx-auto px-4 mt-16">
+      <section className="bg-green-100 py-12 sm:py-16">
+        <div className="max-w-6xl mx-auto px-4 mt-16">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
@@ -109,45 +109,22 @@ const Products = () => {
           <div className="flex flex-col md:flex-col gap-10">
             {/* Products List - up */}
 
-            <motion.div
-              className="flex gap-10 justify-center  "
-              initial={{ x: -100 }}
-              animate={{ x: 0 }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            >
-              <div className="w-64 h-64 md:w-80 md:h-80 flex items-center  ">
-                <img
-                  src={fert2}
-                  alt={"Assase Aduane"}
-                  className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-lg border-4 border-green-800 m-0.5  "
-                />
-              </div>
-              <div className="w-64 h-64 md:w-80 md:h-80 flex items-center">
-                <img
-                  src={fert}
-                  alt={"Assase Aduane"}
-                  className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-lg border-4 border-green-800 m-0.5"
-                />
-              </div>
-              <div className="w-64 h-64 md:w-80 md:h-80 flex items-center ">
-                <img
-                  src={fert2}
-                  alt={"Assase Aduane"}
-                  className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-lg border-4 border-green-800 m-0.5 "
-                />
-              </div>
-              <div className="w-64 h-64 md:w-80 md:h-80 flex items-center">
-                <img
-                  src={fert}
-                  alt={"Assase Aduane"}
-                  className="w-full h-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-lg border-4 border-green-800 m-0.5"
-                />
-              </div>
-            </motion.div>
+ <motion.div
+    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 place-items-center"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    {[fert2, fert, fert2, fert].map((img, index) => (
+      <div key={index} className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[250px]">
+        <img
+          src={img}
+          alt="JAASGROW product"
+          className="w-full h-auto rounded-lg border-4 border-green-800 shadow-lg transform hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+  ))}
+</motion.div>
 
             {/* Product Details - down */}
             <div className="mt-2 mx-auto ">
