@@ -78,7 +78,7 @@ Please follow the official integration guide at:
    
    Then edit the `.env` file and add your Boafo API key:
    ```
-   NEXT_PUBLIC_BOAFO_API_KEY=your_actual_boafo_api_key_here
+   VITE_BOAFO_API_KEY=your_actual_boafo_api_key_here
    ```
 
 4. **Run the development server**
@@ -106,4 +106,4 @@ Please follow the official integration guide at:
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `NEXT_PUBLIC_BOAFO_API_KEY` | Your Boafo Accessibility Widget API key | Yes |
+| `VITE_BOAFO_API_KEY` | Your Boafo Accessibility Widget API key | Yes |
