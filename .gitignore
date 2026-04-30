@@ -27,6 +27,15 @@ ToDo.md
 # Next.js
 .next/
 
+# Environment variables
+.env
+.env.local
+.env.production
+.env*.local
+
+# Next.js
+.next/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
