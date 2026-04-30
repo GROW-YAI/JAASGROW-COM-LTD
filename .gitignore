@@ -10,8 +10,22 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+build
 *.local
 package-lock.json
+pnpm-lock.yaml
+pnpm-lock.yaml.*
+widget-test.html
+ToDo.md
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env*.local
+
+# Next.js
+.next/
 
 # Environment variables
 .env
